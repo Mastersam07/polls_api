@@ -6,6 +6,7 @@
 
 An API for a basic poll application built with dart_frog
 
+```md
 polls_api/              # Root directory of your Dart Frog project
 ├── db/                 # Database-related files
 │   ├── database.dart         # Database connection and initialization
@@ -23,7 +24,7 @@ polls_api/              # Root directory of your Dart Frog project
 │   │   │   ├── vote.dart     # Vote on a poll (POST /polls/:pollId/vote)
 │   │   │   └── results.dart  # Get poll results (GET /polls/:pollId/results)
 ├── pubspec.yaml        # Dart project dependencies and metadata
-
+```
 
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license_link]: https://opensource.org/licenses/MIT
