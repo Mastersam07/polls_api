@@ -1,0 +1,9 @@
+{
+    "editor.rulers": [
+        120
+    ],
+    "dart.lineLength": 120,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "notebook.formatOnSave.enabled": true
+}
