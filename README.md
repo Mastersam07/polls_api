@@ -4,7 +4,26 @@
 [![License: MIT][license_badge]][license_link]
 [![Powered by Dart Frog](https://img.shields.io/endpoint?url=https://tinyurl.com/dartfrog-badge)](https://dartfrog.vgv.dev)
 
-An example application built with dart_frog
+An API for a basic poll application built with dart_frog
+
+polls_api/              # Root directory of your Dart Frog project
+├── db/                 # Database-related files
+│   ├── database.dart         # Database connection and initialization
+│   └── schema.sql            # SQL schema for the database
+├── middleware/         # Middleware files
+│   └── auth_middleware.dart  # Middleware to verify JWT tokens
+├── routes/             # API route handlers
+│   ├── auth/           # Authentication-related endpoints
+│   │   ├── login.dart        # Login endpoint (POST /auth/login)
+│   │   └── register.dart     # Register endpoint (POST /auth/register)
+│   ├── polls/          # Poll-related endpoints
+│   │   ├── index.dart        # List all polls (GET /polls)
+│   │   ├── [pollId]/         # Dynamic routes for specific polls
+│   │   │   ├── index.dart    # Get poll details (GET /polls/:pollId)
+│   │   │   ├── vote.dart     # Vote on a poll (POST /polls/:pollId/vote)
+│   │   │   └── results.dart  # Get poll results (GET /polls/:pollId/results)
+├── pubspec.yaml        # Dart project dependencies and metadata
+
 
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license_link]: https://opensource.org/licenses/MIT
