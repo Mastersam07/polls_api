@@ -18,7 +18,6 @@ Future<Response> onRequest(RequestContext context) async {
   final body = await context.request.body();
   final data = jsonDecode(body) as Map<String, dynamic>;
 
-  // Explicitly cast to String
   final username = data['username'] as String?;
   final password = data['password'] as String?;
 

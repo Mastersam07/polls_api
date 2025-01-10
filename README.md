@@ -9,11 +9,11 @@ An API for a basic poll application built with dart_frog
 ```md
 polls_api/              # Root directory of your Dart Frog project
 ├── db/                 # Database-related files
-│   ├── database.dart         # Database connection and initialization
 │   └── schema.sql            # SQL schema for the database
 ├── middleware/         # Middleware files
 │   └── auth_middleware.dart  # Middleware to verify JWT tokens
 ├── routes/             # API route handlers
+│   ├── _middelware.dart
 │   ├── auth/           # Authentication-related endpoints
 │   │   ├── login.dart        # Login endpoint (POST /auth/login)
 │   │   └── register.dart     # Register endpoint (POST /auth/register)
@@ -24,6 +24,7 @@ polls_api/              # Root directory of your Dart Frog project
 │   │   │   ├── vote.dart     # Vote on a poll (POST /polls/:pollId/vote)
 │   │   │   └── results.dart  # Get poll results (GET /polls/:pollId/results)
 ├── pubspec.yaml        # Dart project dependencies and metadata
+├── seed.dart           # Seed db
 ```
 
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg

@@ -16,13 +16,6 @@ Response onRequest(RequestContext context, String pollId) {
       return {
         'id': question.id,
         'text': question.text,
-        'choices': question.choices.map((choice) {
-          return {
-            'id': choice.id,
-            'text': choice.text,
-            'votes': choice.votes,
-          };
-        }).toList(),
       };
     }).toList(),
   };
