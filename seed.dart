@@ -1,7 +1,7 @@
 import 'package:sqlite3/sqlite3.dart';
 
 void main() {
-  final db = sqlite3.open('polls.db')
+  sqlite3.open('polls.db')
 
     // Create tables if they don't exist
     ..execute('''
@@ -51,9 +51,7 @@ void main() {
     ..execute("INSERT INTO choices (text, votes, question_id) VALUES ('JavaScript', 0, 1);")
     ..execute("INSERT INTO choices (text, votes, question_id) VALUES ('PHP', 0, 2);")
     ..execute("INSERT INTO choices (text, votes, question_id) VALUES ('Perl', 0, 2);")
-    ..execute("INSERT INTO choices (text, votes, question_id) VALUES ('C++', 0, 2);");
+    ..execute("INSERT INTO choices (text, votes, question_id) VALUES ('C++', 0, 2);")
 
-  print('Database seeded successfully!');
-
-  db.dispose();
+  ..dispose();
 }
