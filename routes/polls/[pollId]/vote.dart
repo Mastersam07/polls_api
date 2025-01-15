@@ -3,9 +3,6 @@ import 'dart:convert';
 import 'package:dart_frog/dart_frog.dart';
 
 import '../../../data/repositories/poll_repository.dart';
-import '../../../middleware/auth_middleware.dart';
-
-Middleware middleware = authMiddleware();
 
 Future<Response> onRequest(RequestContext context, String pollId) async {
   final repository = context.read<PollRepository>();
